@@ -15,4 +15,80 @@
 
 .navbar li {
     margin: 0 15px;
+    text-decoration: none;
+}
+.cabecalho {
+    background-color: #3b82f6;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+}
+.logo {
+    width: 50px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 6%;
+    border-style: solid;
+    
+}
+.celular {
+    width: 40px;
+    height: 60px;
+    background-color: #291d1d;
+    margin: 5px auto;
+    border-radius: 19%;
+}
+.camera {
+    width: 10px;
+    height: 10px;
+    background-color: #291d1d;
+    margin: 5px auto;
+    border-radius: 50%;
+}
+.buscar-box{
+    width: 80px;
+    height: 80px;
+   
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    transition: .5s;
+}
+
+.buscar-box.ativar{
+    width: 400px;
+}
+
+.buscar-box .lupa-buscar, .buscar-box .btn-fechar{
+    min-width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.buscar-box .btn-fechar i{
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.buscar-box .lupa-buscar i{
+    font-size: 35px;
+}
+
+.buscar-box .input-buscar{
+    position: absolute;
+    left: 80px;
+    width: calc(80px - 90px);
+    height: 40%;
+    line-height: 80px;
+}
+
+.buscar-box .input-buscar input{
+    border: 0;
+    outline: 0;
+    font-size: 20px;
 }
