@@ -5,6 +5,13 @@
     padding: 0;
 
 }
+/* corrected global body rules and reserve space for fixed header */
+body {
+    background-color: #949494;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 100px; /* reserve space for .cabecalho (approx header height) */
+}
 .navbar ul {
     display: flex;
     list-style: none;
@@ -21,8 +28,14 @@
     background-color: #3b82f6;
     display: flex;
     align-items: center;
+    justify-content: center; /* center children horizontally */
+    gap: 20px; /* space between logo, title and search */
     padding: 10px;
-
+    position: fixed; /* keep header fixed at top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 .logo {
     width: 50px;
@@ -46,49 +59,31 @@
     margin: 5px auto;
     border-radius: 50%;
 }
-.buscar-box{
-    width: 80px;
-    height: 80px;
-   
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    transition: .5s;
-}
-
-.buscar-box.ativar{
-    width: 400px;
-}
-
-.buscar-box .lupa-buscar, .buscar-box .btn-fechar{
-    min-width: 80px;
-    height: 80px;
+.lupa {
     display: flex;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 4px 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
-.buscar-box .btn-fechar i{
-    font-size: 20px;
-    margin-left: 5px;
+.lupa input {
+    border: none;
+    outline: none;
+    padding: 2px;
+    font-size: 12px;
 }
-
-.buscar-box .lupa-buscar i{
-    font-size: 35px;
+.carrinho {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 4px 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
-.buscar-box .input-buscar{
-    position: absolute;
-    left: 80px;
-    width: calc(80px - 90px);
-    height: 40%;
-    line-height: 80px;
-}
-
-.buscar-box .input-buscar input{
-    border: 0;
-    outline: 0;
-    font-size: 20px;
+.carrinho input {
+    border: none;
+    outline: none;
+    padding: 2px;
+    font-size: 12px;
 }
