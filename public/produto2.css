@@ -93,11 +93,66 @@ button:hover {
     animation: flutuar 2s ease-in-out infinite alternate;
 }
 
-@keyframes flutuar{
-    0%{
-        top:0;
-    }
-    100%{
-        top: 5px;
-    }
+.cabecalho {
+    background-color: #3b82f6;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* center children horizontally */
+    gap: 20px; /* space between logo, title and search */
+    padding: 10px;
+    position: fixed; /* keep header fixed at top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.logo {
+    width: 50px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 6%;
+    border-style: solid;
+    
+}
+.celular {
+    width: 40px;
+    height: 60px;
+    background-color: #291d1d;
+    margin: 5px auto;
+    border-radius: 19%;
+}
+.camera {
+    width: 10px;
+    height: 10px;
+    background-color: #291d1d;
+    margin: 5px auto;
+    border-radius: 50%;
+}
+.lupa {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 4px 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.lupa input {
+    border: none;
+    outline: none;
+    padding: 2px;
+    font-size: 12px;
+}
+.carrinho {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 4px 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.carrinho input {
+    border: none;
+    outline: none;
+    padding: 2px;
+    font-size: 12px;
 }
