@@ -13,7 +13,6 @@
 
 <body>
 
-  <!-- ── Navbar ── -->
   <nav class="navbar">
     <a href="../index.html" class="navbar__logo">
       <div class="navbar__logo-icon">
@@ -41,9 +40,13 @@
       <h1>Carrinho de compras</h1>
 
       <div class="carrinho-item">
-        <img src="../img/produto1.png" alt="iPhone 17 Pro Max" class="produto-imagem">
+        <a href="produto1.html" class="produto-link">
+          <img src="../img/tela_iphone17.png" alt="iPhone 17 Pro Max" class="produto-imagem">
+        </a>
         <div class="produto-info">
-          <h3>iPhone 17 Pro Max 256GB</h3>
+          <a href="produto1.html" class="produto-link">
+            <h3>iPhone 17 Pro Max 256GB</h3>
+          </a>
           <p>Tela Super Retina XDR 6.9", Câmera 48MP, Titânio Natural</p>
           <div class="acoes">
             <button aria-label="Diminuir quantidade">−</button>
@@ -52,13 +55,20 @@
             <button class="btn-remover">Remover</button>
           </div>
         </div>
-        <div class="produto-preco">R$ 7.499,90</div>
+        <div class="carrinho-lateral">
+          <div class="produto-preco">R$ 7.499,90</div>
+          <button class="btn-comprar">Comprar</button>
+        </div>
       </div>
 
       <div class="carrinho-item">
-        <img src="../img/s23-img.png" alt="Galaxy S23 Ultra" class="produto-imagem">
+        <a href="produto2.html" class="produto-link">
+          <img src="../img/galaxy_S25.png" alt="Galaxy S25" class="produto-imagem">
+        </a>
         <div class="produto-info">
-          <h3>Samsung Galaxy S23 Ultra 256GB</h3>
+          <a href="produto2.html" class="produto-link">
+            <h3>Samsung Galaxy S25 256GB</h3>
+          </a>
           <p>Tela AMOLED 6.8", Câmera 200MP, 5G</p>
           <div class="acoes">
             <button aria-label="Diminuir quantidade">−</button>
@@ -67,7 +77,10 @@
             <button class="btn-remover">Remover</button>
           </div>
         </div>
-        <div class="produto-preco">R$ 7.999,90</div>
+        <div class="carrinho-lateral">
+          <div class="produto-preco">R$ 7.999,90</div>
+          <button class="btn-comprar">Comprar</button>
+        </div>
       </div>
     </div>
   </div>
