@@ -67,7 +67,7 @@ O fluxo de autenticação usa `localStorage` para persistir contas e `sessionSto
 - **Registro** (`registro.html` + `js/registro.js`): salva em `localStorage.accounts[]`
 - **Login** (`login.html` + `js/login.js`): valida e salva sessão em `sessionStorage.loggedUser`
 
-> ⚠️ **Nota:** Para produção, substitua por uma API real com autenticação segura (JWT, OAuth, etc.). Nunca armazene senhas em texto puro no `localStorage`.
+>  **Nota:** Para produção, substitua por uma API real com autenticação segura (JWT, OAuth, etc.). Nunca armazene senhas em texto puro no `localStorage`.
 
 ## Melhorias Futuras
 
