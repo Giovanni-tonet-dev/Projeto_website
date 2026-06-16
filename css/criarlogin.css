@@ -4,8 +4,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .caixa {
@@ -37,6 +39,7 @@ label {
   color: #333333;
 }
 
+input[type="text"],
 input[type="email"],
 input[type="password"] {
   width: 100%;
@@ -48,27 +51,40 @@ input[type="password"] {
   box-sizing: border-box;
 }
 
+input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
   border-color: #4a90e2;
   outline: none;
 }
 
-.opcoes {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.termos {
   margin-bottom: 20px;
+  text-align: left;
   font-size: 13px;
   color: #555555;
 }
 
-.opcoes a {
+.termos label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: #555555;
+  cursor: pointer;
+}
+
+.termos input[type="checkbox"] {
+  margin-top: 2px;
+  width: auto;
+}
+
+.termos a {
   color: #4a90e2;
   text-decoration: none;
 }
 
-.opcoes a:hover {
+.termos a:hover {
   text-decoration: underline;
 }
 
@@ -101,3 +117,4 @@ button:hover {
 .caixa > p:last-child a:hover {
   text-decoration: underline;
 }
+
