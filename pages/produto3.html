@@ -1,50 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="produto3.css">
-    <link rel="stylesheet" href="/style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samsung Galaxy S25 Ultra — TechCell</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/produtos.css">
 </head>
 
 <body>
-<div class="cabecalho">
-        <div class="logo">
-            <div class="celular"></div>
-            <div class="camera"></div>
-        </div>
-        <div class="site-title">
-            <h2>TechCell</h2>
-        </div>
-        <div class="lupa">
-            🔍 <input type="text" name id placeholder="faça uma busca">
-        </div>
-        <div class="carrinho">🛒</div>
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar">
+    <a href="../index.html" class="navbar__logo">
+      <div class="navbar__logo-icon">
+        <div class="celular"></div>
+        <div class="camera"></div>
+      </div>
+      <h2 class="navbar__brand">TechCell</h2>
+    </a>
+
+    <div class="navbar__search">
+      <span>🔍</span>
+      <input type="text" placeholder="Faça uma busca" aria-label="Campo de busca">
     </div>
+
+    <div class="navbar__actions">
+      <a href="favoritos.html" class="navbar__btn">♡ Favoritos</a>
+      <a href="carrinho.html" class="navbar__btn">🛒 Carrinho</a>
+      <a href="login.html" class="navbar__btn">👤 Entrar</a>
+    </div>
+  </nav>
+
+  <!-- ── Conteúdo ── -->
+  <div class="page-content">
     <div class="produto-container">
-        <img src="../img/xiomi.png" alt="Xiaomi 17 Pro" class="produto-imagem">
+      <img src="../img/xiomi.png" alt="Xiaomi 17 Pro" class="produto-imagem">
 
-        <div class="produto-info">
-            <h1>Xiaomi 17 pro</h1>
-            <h2>R$ 8.499,90</h2>
-            <p>
-                O mais avançado Xiaomi já criado, com câmera profissional,
-                desempenho excepcional e bateria de longa duração.
-            </p>
-            <h3>Cores disponíveis</h3>
-            <div class="cores">
-                <span class="cor preto"></span>
-                <span class="cor vermelho"></span>
-                <span class="cor azul"></span>
-                <span class="cor laranja"></span>
-            </div>
-            <button>Comprar Agora</button>
-
+      <div class="produto-info">
+        <h1>Xiamoi 17 Pro</h1>
+        <p class="produto-preco">R$ 10.999,00</p>
+        <p>
+          O mais avançado Xiaomi já criado, com câmera profissional de 200MP,
+          desempenho excepcional com Snapdragon 8 Gen 2 e bateria de longa duração.
+        </p>
+        <h3>Cores disponíveis</h3>
+        <div class="cores">
+          <span class="cor preto" title="Preto"></span>
+          <span class="cor vermelho" title="Vermelho"></span>
+          <span class="cor azul" title="Azul"></span>
+          <span class="cor laranja" title="Laranja"></span>
         </div>
+        <button class="btn-comprar">Comprar agora</button>
+      </div>
     </div>
+  </div>
 
-</body>
-    
 </body>
 </html>
