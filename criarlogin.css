@@ -1,393 +1,119 @@
-/* ============================================
-   RESET & BASE
-   ============================================ */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  --bg:           #a5a5a5;
-  --surface:      #858585;
-  --border:       #2a2a38;
-  --border-focus: #6366F1;
-  --text-primary: #f0f0f5;
-  --text-muted:   #7b7b96;
-  --accent:       #6366F1;
-  --accent-hover: #4f51d8;
-  --danger:       #f87171;
-  --success:      #4ade80;
-  --radius:       12px;
-  --transition:   0.2s ease;
-}
-
-html, body {
-  height: 100%;
-}
-
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--bg);
-  color: var(--text-primary);
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  padding: 24px;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* ============================================
-   BACKGROUND GLOW
-   ============================================ */
-.bg-glow {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(99,102,241,0.18) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-  animation: pulse 6s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1); }
-  50%       { opacity: 1;   transform: translate(-50%, -50%) scale(1.1); }
-}
-
-/* ============================================
-   CARD
-   ============================================ */
-.card {
-  position: relative;
-  z-index: 1;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 44px 40px 36px;
-  width: 100%;
-  max-width: 440px;
-  box-shadow: 0 0 0 1px rgba(99,102,241,0.08),
-              0 24px 60px rgba(0,0,0,0.5);
-  animation: fadeUp 0.45s cubic-bezier(0.22,1,0.36,1) both;
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* ============================================
-   HEADER
-   ============================================ */
-.card-header {
+.caixa {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  padding: 30px;
+  width: 350px;
   text-align: center;
-  margin-bottom: 28px;
 }
 
-.logo {
-  display: inline-flex;
+.caixa h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+.caixa p {
+  font-size: 14px;
+  color: #777777;
   margin-bottom: 20px;
 }
 
-.title {
-  font-family: 'Sora', sans-serif;
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
-  margin-bottom: 6px;
-}
-
-.subtitle {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-
-/* ============================================
-   FORM & FIELDS
-   ============================================ */
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
 label {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: var(--text-primary);
-  letter-spacing: 0.01em;
-}
-
-.input-wrap {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.input-icon {
-  position: absolute;
-  left: 14px;
-  color: var(--text-muted);
-  pointer-events: none;
-  transition: color var(--transition);
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #333333;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
   width: 100%;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
-  padding: 11px 14px 11px 42px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #4a90e2;
   outline: none;
-  transition: border-color var(--transition), box-shadow var(--transition);
 }
 
-input[type="password"] {
-  padding-right: 42px;
+.termos {
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 13px;
+  color: #555555;
 }
 
-input::placeholder {
-  color: var(--text-muted);
-  opacity: 0.7;
-}
-
-input:focus {
-  border-color: var(--border-focus);
-  box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
-}
-
-.input-wrap:focus-within .input-icon {
-  color: var(--accent);
-}
-
-/* Estado de erro */
-.field.has-error input {
-  border-color: var(--danger);
-  box-shadow: 0 0 0 3px rgba(248,113,113,0.15);
-}
-
-.error-msg {
-  font-size: 0.78rem;
-  color: var(--danger);
-  min-height: 16px;
-  display: block;
-}
-
-/* Toggle senha */
-.toggle-pass {
-  position: absolute;
-  right: 12px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  padding: 4px;
-  border-radius: 6px;
-  transition: color var(--transition);
-}
-
-.toggle-pass:hover {
-  color: var(--text-primary);
-}
-
-/* ============================================
-   FORÇA DA SENHA
-   ============================================ */
-.strength-bar {
-  display: flex;
-  gap: 5px;
-  margin-top: 2px;
-}
-
-.strength-bar span {
-  flex: 1;
-  height: 3px;
-  border-radius: 99px;
-  background: var(--border);
-  transition: background 0.3s ease;
-}
-
-.strength-bar.s1 span:nth-child(1)                          { background: var(--danger); }
-.strength-bar.s2 span:nth-child(-n+2)                       { background: #fb923c; }
-.strength-bar.s3 span:nth-child(-n+3)                       { background: #facc15; }
-.strength-bar.s4 span                                       { background: var(--success); }
-
-.strength-label {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  min-height: 14px;
-}
-
-/* ============================================
-   TERMOS
-   ============================================ */
-.field-terms {
-  margin-top: -2px;
-}
-
-.checkbox-label {
+.termos label {
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  font-size: 0.8125rem;
-  color: var(--text-muted);
+  font-size: 13px;
+  color: #555555;
   cursor: pointer;
-  user-select: none;
-  line-height: 1.5;
 }
 
-.checkbox-label input[type="checkbox"] {
-  display: none;
+.termos input[type="checkbox"] {
+  margin-top: 2px;
+  width: auto;
 }
 
-.checkmark {
-  width: 16px;
-  height: 16px;
-  min-width: 16px;
-  border: 1.5px solid var(--border);
-  border-radius: 4px;
-  background: var(--bg);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1px;
-  transition: border-color var(--transition), background var(--transition);
-}
-
-.checkbox-label input:checked ~ .checkmark {
-  background: var(--accent);
-  border-color: var(--accent);
-}
-
-.checkbox-label input:checked ~ .checkmark::after {
-  content: '';
-  width: 9px;
-  height: 5px;
-  border-left: 1.5px solid #fff;
-  border-bottom: 1.5px solid #fff;
-  transform: rotate(-45deg) translateY(-1px);
-  display: block;
-}
-
-/* ============================================
-   BOTÃO PRINCIPAL
-   ============================================ */
-.btn-primary {
-  margin-top: 4px;
-  width: 100%;
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  border-radius: var(--radius);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  padding: 13px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-  letter-spacing: 0.01em;
-}
-
-.btn-primary:hover:not(:disabled) {
-  background: var(--accent-hover);
-  box-shadow: 0 4px 20px rgba(99,102,241,0.4);
-}
-
-.btn-primary:active:not(:disabled) {
-  transform: scale(0.98);
-}
-
-.btn-primary:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-/* Spinner */
-.spinner {
-  display: none;
-  width: 16px;
-  height: 16px;
-  border: 2px solid rgba(255,255,255,0.3);
-  border-top-color: #fff;
-  border-radius: 50%;
-  animation: spin 0.7s linear infinite;
-}
-
-.spinner.active {
-  display: block;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-/* ============================================
-   RODAPÉ
-   ============================================ */
-.footer-text {
-  text-align: center;
-  font-size: 0.8125rem;
-  color: var(--text-muted);
-  margin-top: 24px;
-}
-
-.link {
-  color: var(--accent);
+.termos a {
+  color: #4a90e2;
   text-decoration: none;
-  font-weight: 500;
-  transition: opacity var(--transition);
 }
 
-.link:hover {
-  opacity: 0.75;
+.termos a:hover {
+  text-decoration: underline;
 }
 
-/* ============================================
-   RESPONSIVO
-   ============================================ */
-@media (max-width: 480px) {
-  .card {
-    padding: 36px 24px 28px;
-  }
-
-  .title {
-    font-size: 1.4rem;
-  }
+button {
+  width: 100%;
+  padding: 11px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
 }
 
-/* ============================================
-   ACESSIBILIDADE
-   ============================================ */
-@media (prefers-reduced-motion: reduce) {
-  .bg-glow, .card {
-    animation: none;
-  }
+button:hover {
+  background-color: #357abd;
 }
 
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
+.caixa > p:last-child {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #777777;
+}
+
+.caixa > p:last-child a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+.caixa > p:last-child a:hover {
+  text-decoration: underline;
 }

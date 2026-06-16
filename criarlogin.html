@@ -1,117 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Criar conta</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="criarlogin.css"/>
+  <link rel="stylesheet" href="criarlogin.css">
 </head>
 <body>
 
-  <div class="bg-glow"></div>
+  <div class="caixa">
 
-  <main class="card">
-    <div class="card-header">
-      <div class="logo">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="32" height="32" rx="8" fill="#6366F1"/>
-          <path d="M9 16L14 21L23 11" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-      <h1 class="title">Criar conta</h1>
-      <p class="subtitle">Preencha os dados abaixo para começar</p>
-    </div>
+    <h1>Criar conta</h1>
+    <p>Preencha os campos abaixo para se cadastrar</p>
 
-    <form class="form" id="registerForm" novalidate>
+    <form id="registerForm">
 
-      <!-- Nome -->
-      <div class="field" id="field-name">
-        <label for="name">Nome completo</label>
-        <div class="input-wrap">
-          <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-            <circle cx="12" cy="7" r="4"/>
-          </svg>
-          <input type="text" id="name" name="name" placeholder="Seu nome completo" autocomplete="name"/>
-        </div>
-        <span class="error-msg" id="error-name"></span>
-      </div>
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
 
-      <!-- E-mail -->
-      <div class="field" id="field-email">
-        <label for="email">E-mail</label>
-        <div class="input-wrap">
-          <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-            <polyline points="22,6 12,13 2,6"/>
-          </svg>
-          <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email"/>
-        </div>
-        <span class="error-msg" id="error-email"></span>
-      </div>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
 
-      <!-- Senha -->
-      <div class="field" id="field-password">
-        <label for="password">Senha</label>
-        <div class="input-wrap">
-          <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-          </svg>
-          <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres" autocomplete="new-password"/>
-          <button type="button" class="toggle-pass" id="togglePass" aria-label="Mostrar senha">
-            <svg id="eyeIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-              <circle cx="12" cy="12" r="3"/>
-            </svg>
-          </button>
-        </div>
-        <div class="strength-bar" id="strengthBar" aria-hidden="true">
-          <span></span><span></span><span></span><span></span>
-        </div>
-        <span class="strength-label" id="strengthLabel"></span>
-        <span class="error-msg" id="error-password"></span>
-      </div>
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" placeholder="Mínimo 8 caracteres">
 
-      <!-- Confirmar senha -->
-      <div class="field" id="field-confirm">
-        <label for="confirm">Confirmar senha</label>
-        <div class="input-wrap">
-          <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          </svg>
-          <input type="password" id="confirm" name="confirm" placeholder="Repita a senha" autocomplete="new-password"/>
-          <button type="button" class="toggle-pass" id="toggleConfirm" aria-label="Mostrar confirmação">
-            <svg id="eyeIconConfirm" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-              <circle cx="12" cy="12" r="3"/>
-            </svg>
-          </button>
-        </div>
-        <span class="error-msg" id="error-confirm"></span>
-      </div>
+      <label for="confirmar">Confirmar senha:</label>
+      <input type="password" id="confirmar" name="confirmar" placeholder="Repita a senha">
 
-      <!-- Termos -->
-      <div class="field field-terms" id="field-terms">
-        <label class="checkbox-label">
-          <input type="checkbox" id="terms"/>
-          <span class="checkmark"></span>
-          Concordo com os <a href="termosepolitica.html" class="link">Termos de uso</a> e a <a href="termosepolitica.html" class="link">Política de privacidade</a>
+      <div class="termos">
+        <label>
+          <input type="checkbox" id="termos">
+          Concordo com os <a href="termosepolitica.html">Termos de uso</a> e a <a href="termosepolitica.html">Política de privacidade</a>
         </label>
-        <span class="error-msg" id="error-terms"></span>
       </div>
 
-      <button type="submit" class="btn-primary" id="submitBtn">
-        <span id="btnText">Criar conta</span>
-        <span class="spinner" id="spinner" aria-hidden="true"></span>
-      </button>
+      <button type="submit">Criar conta</button>
+
     </form>
-    <p class="footer-text">Já tem uma conta? <a href="login.html" class="link">Entrar</a></p>
 
-  </main>
+    <p>Já tem conta? <a href="login.html">Entrar</a></p>
 
-  <script src="criarlogin.js"></script>
+  </div>
+
 </body>
 </html>
