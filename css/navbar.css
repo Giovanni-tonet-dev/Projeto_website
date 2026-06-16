@@ -1,0 +1,115 @@
+/* ============================================
+   NAVBAR.CSS — Cabeçalho compartilhado
+   ============================================ */
+
+.navbar {
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-md);
+}
+
+/* Logo */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.navbar__logo-icon {
+  width: 40px;
+  height: 60px;
+  background-color: var(--color-white);
+  border-radius: 6px;
+  border: 2px solid rgba(255,255,255,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.navbar__logo-icon .celular {
+  width: 28px;
+  height: 40px;
+  background-color: #1e293b;
+  border-radius: 4px;
+}
+
+.navbar__logo-icon .camera {
+  width: 8px;
+  height: 8px;
+  background-color: #1e293b;
+  border-radius: 50%;
+}
+
+.navbar__brand {
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Busca */
+.navbar__search {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+  padding: 6px 10px;
+  gap: 6px;
+  box-shadow: var(--shadow-sm);
+  flex: 1;
+  max-width: 300px;
+  margin: 0 20px;
+}
+
+.navbar__search input {
+  border: none;
+  outline: none;
+  font-size: 0.875rem;
+  width: 100%;
+  color: var(--color-text);
+}
+
+/* Ações */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar__btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: var(--radius);
+  padding: 6px 12px;
+  color: var(--color-white);
+  font-size: 0.875rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color var(--transition);
+}
+
+.navbar__btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Espaço para o header fixo */
+.page-content {
+  padding-top: var(--header-height);
+}

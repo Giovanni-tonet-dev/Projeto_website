@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho — TechCell</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/carrinho.css">
+</head>
+
+<body>
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar">
+    <a href="../index.html" class="navbar__logo">
+      <div class="navbar__logo-icon">
+        <div class="celular"></div>
+        <div class="camera"></div>
+      </div>
+      <h2 class="navbar__brand">TechCell</h2>
+    </a>
+
+    <div class="navbar__search">
+      <span>🔍</span>
+      <input type="text" placeholder="Faça uma busca" aria-label="Campo de busca">
+    </div>
+
+    <div class="navbar__actions">
+      <a href="favoritos.html" class="navbar__btn">♡ Favoritos</a>
+      <a href="carrinho.html" class="navbar__btn">🛒 Carrinho</a>
+      <a href="login.html" class="navbar__btn">👤 Entrar</a>
+    </div>
+  </nav>
+
+  <!-- ── Conteúdo ── -->
+  <div class="page-content">
+    <div class="carrinho-page">
+      <h1>Carrinho de compras</h1>
+
+      <div class="carrinho-item">
+        <img src="../img/produto1.png" alt="iPhone 17 Pro Max" class="produto-imagem">
+        <div class="produto-info">
+          <h3>iPhone 17 Pro Max 256GB</h3>
+          <p>Tela Super Retina XDR 6.9", Câmera 48MP, Titânio Natural</p>
+          <div class="acoes">
+            <button aria-label="Diminuir quantidade">−</button>
+            <span>1</span>
+            <button aria-label="Aumentar quantidade">+</button>
+            <button class="btn-remover">Remover</button>
+          </div>
+        </div>
+        <div class="produto-preco">R$ 7.499,90</div>
+      </div>
+
+      <div class="carrinho-item">
+        <img src="../img/s23-img.png" alt="Galaxy S23 Ultra" class="produto-imagem">
+        <div class="produto-info">
+          <h3>Samsung Galaxy S23 Ultra 256GB</h3>
+          <p>Tela AMOLED 6.8", Câmera 200MP, 5G</p>
+          <div class="acoes">
+            <button aria-label="Diminuir quantidade">−</button>
+            <span>1</span>
+            <button aria-label="Aumentar quantidade">+</button>
+            <button class="btn-remover">Remover</button>
+          </div>
+        </div>
+        <div class="produto-preco">R$ 7.999,90</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

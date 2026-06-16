@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favoritos — TechCell</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/favoritos.css">
+</head>
+
+<body>
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar">
+    <a href="../index.html" class="navbar__logo">
+      <div class="navbar__logo-icon">
+        <div class="celular"></div>
+        <div class="camera"></div>
+      </div>
+      <h2 class="navbar__brand">TechCell</h2>
+    </a>
+
+    <div class="navbar__search">
+      <span>🔍</span>
+      <input type="text" placeholder="Faça uma busca" aria-label="Campo de busca">
+    </div>
+
+    <div class="navbar__actions">
+      <a href="favoritos.html" class="navbar__btn">♡ Favoritos</a>
+      <a href="carrinho.html" class="navbar__btn">🛒 Carrinho</a>
+      <a href="login.html" class="navbar__btn">👤 Entrar</a>
+    </div>
+  </nav>
+
+  <!-- ── Conteúdo ── -->
+  <div class="page-content">
+    <div class="favoritos-page">
+      <h1>Favoritos</h1>
+
+      <div class="topo">
+        <p>Produtos que você ama e quer ter sempre por perto.</p>
+        <button class="btn-remover-todos">Remover todos</button>
+      </div>
+
+      <div class="produto-favorito">
+        <img src="../img/produto1.png" alt="iPhone 14 Pro Max">
+        <div class="info">
+          <span class="categoria">Smartphone</span>
+          <h2>iPhone 14 Pro Max</h2>
+          <p>Tela 6.7", Câmera 48MP, Chip A16 Bionic</p>
+          <span class="estoque">Em estoque</span>
+        </div>
+        <div class="comprar">
+          <h3>R$ 7.499,99</h3>
+          <button class="btn-adicionar">Adicionar ao carrinho</button>
+        </div>
+      </div>
+
+      <div class="produto-favorito">
+        <img src="../img/s23-img.png" alt="Samsung Galaxy S23 Ultra">
+        <div class="info">
+          <span class="categoria">Smartphone</span>
+          <h2>Samsung Galaxy S23 Ultra</h2>
+          <p>Tela 6.8", Câmera 200MP, Chip Snapdragon 8 Gen 2</p>
+          <span class="estoque">Em estoque</span>
+        </div>
+        <div class="comprar">
+          <h3>R$ 6.999,99</h3>
+          <button class="btn-adicionar">Adicionar ao carrinho</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer" style="background:#1e293b; color: rgba(255,255,255,0.6); text-align:center; padding:24px; font-size:0.85rem; margin-top:40px;">
+      <p>&copy; 2026 TechCell. Todos os direitos reservados.</p>
+    </footer>
+  </div>
+
+</body>
+</html>

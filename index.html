@@ -1,74 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechCell — Smartphones & Acessórios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
-    <div class="cabecalho">
-        <div class="logo">
-            <div class="celular"></div>
-            <div class="camera"></div>
-        </div>
-        <div class="site-title">
-            <h2>TechCell</h2>
-        </div>
-        <div class="lupa">
-            🔍 <input type="text" name id placeholder="faça uma busca">
-        </div>
-        <div class="carrinho">🛒</div>
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo">
+      <div class="navbar__logo-icon">
+        <div class="celular"></div>
+        <div class="camera"></div>
+      </div>
+      <h2 class="navbar__brand">TechCell</h2>
+    </a>
+
+    <div class="navbar__search">
+      <span>🔍</span>
+      <input type="text" placeholder="Faça uma busca" aria-label="Campo de busca">
     </div>
 
-    <header>
-        
-        <div class="seila">
-            <h3>Categorias</h3>
-            <div class="linha"></div>
-        </div>
+    <div class="navbar__actions">
+      <a href="pages/favoritos.html" class="navbar__btn" aria-label="Favoritos">
+        ♡ Favoritos
+      </a>
+      <a href="pages/carrinho.html" class="navbar__btn" aria-label="Carrinho de compras">
+        🛒 Carrinho
+      </a>
+      <a href="pages/login.html" class="navbar__btn" aria-label="Entrar">
+        👤 Entrar
+      </a>
+    </div>
+  </nav>
 
-        <div class="categorias-container">
-            <div class="categoria-card">
-                <h4>Smartphones</h4>
-                <p>Últimos modelos</p>
-            </div>
-            <div class="categoria-card">
-                <h4>Acessórios</h4>
-                <p>Capas e proteção</p>
-            </div>
-            <div class="categoria-card">
-                <h4>Tablets</h4>
-                <p>Para trabalho e lazer</p>
-            </div>
-        </div>
+  <!-- ── Conteúdo principal ── -->
+  <div class="page-content">
 
-        <div class="seila" style="margin-top: 30px;">
-            <h3>Novidades</h3>
-            <div class="linha"></div>
-        </div>
-        <p></p>
-        <div class="produtos">
-            <img src="img/galaxy_S25.png" alt="produto1">
-            <img src="img/tela_iphone17.png" alt="produto2">
-            <img src="img/xiomi.png" alt="">
-        </div>
-       
+    <!-- Categorias -->
+    <header class="site-header">
+      <div class="section-header">
+        <h3>Categorias</h3>
+        <div class="divider"></div>
+      </div>
 
+      <div class="categorias-container">
+        <div class="categoria-card">
+          <h4>Smartphones</h4>
+          <p>Últimos modelos</p>
+        </div>
+        <div class="categoria-card">
+          <h4>Acessórios</h4>
+          <p>Capas e proteção</p>
+        </div>
+        <div class="categoria-card">
+          <h4>Tablets</h4>
+          <p>Para trabalho e lazer</p>
+        </div>
+      </div>
     </header>
 
+    <!-- Novidades -->
     <main>
+      <section class="produtos-section">
+        <div class="section-header" style="color: var(--color-text);">
+          <h3>Novidades</h3>
+          <div class="divider" style="background-color: var(--color-border);"></div>
+        </div>
 
+        <div class="produtos-grid">
+          <a href="pages/produto1.html">
+            <img src="img/galaxy_S25.png" alt="Samsung Galaxy S25">
+          </a>
+          <a href="pages/produto2.html">
+            <img src="img/tela_iphone17.png" alt="iPhone 17">
+          </a>
+          <img src="img/xiomi.png" alt="Xiaomi">
+        </div>
+      </section>
     </main>
 
-
-
-    <footer>
-        <p>&copy; 2026 My Website. All rights reserved.</p>
+    <footer class="site-footer">
+      <p>&copy; 2026 TechCell. Todos os direitos reservados.</p>
     </footer>
+
+  </div>
 
 </body>
 

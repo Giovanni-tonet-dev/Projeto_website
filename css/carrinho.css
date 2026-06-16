@@ -1,0 +1,110 @@
+/* ============================================
+   CARRINHO.CSS
+   ============================================ */
+
+.carrinho-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+.carrinho-page h1 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  margin-bottom: 24px;
+}
+
+.carrinho-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+
+.carrinho-item .produto-imagem {
+  width: 90px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  flex-shrink: 0;
+}
+
+.produto-info {
+  flex: 1;
+  min-width: 180px;
+}
+
+.produto-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 6px 0;
+}
+
+.produto-info p {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin: 0 0 14px 0;
+}
+
+.acoes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.acoes button {
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 6px;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition);
+}
+
+.acoes button:hover {
+  background-color: var(--color-border);
+}
+
+.acoes span {
+  min-width: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.btn-remover {
+  margin-left: 12px;
+  background: none;
+  border: 1.5px solid var(--color-error) !important;
+  color: var(--color-error) !important;
+  border-radius: 6px;
+  padding: 4px 12px !important;
+  font-size: 0.8rem;
+  cursor: pointer;
+  width: auto !important;
+  height: auto !important;
+}
+
+.btn-remover:hover {
+  background-color: #fef2f2 !important;
+}
+
+.produto-preco {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+  margin-left: auto;
+}
