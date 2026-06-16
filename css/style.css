@@ -1,5 +1,5 @@
 .body {
-    background-color: #949494;
+    background-color: #927878;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -48,14 +48,14 @@ body {
 .celular {
     width: 40px;
     height: 60px;
-    background-color: #291d1d;
+    background-color: #030303;
     margin: 5px auto;
     border-radius: 19%;
 }
 .camera {
     width: 10px;
     height: 10px;
-    background-color: #291d1d;
+    background-color: #050505;
     margin: 5px auto;
     border-radius: 50%;
 }
