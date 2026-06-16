@@ -1,50 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login — TechCell</title>
-  <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/auth.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="login.css"/>
 </head>
 <body>
 
+  <!-- BRILHO DE FUNDO:>
   <div class="bg-glow"></div>
 
+  <!-- CARD PRINCIPAL -->
   <main class="card">
+
+    <!-- CABEÇALHO DO CARD:-->
     <div class="card-header">
-      <div class="logo">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="32" height="32" rx="8" fill="#6366F1"/>
-          <path d="M9 16L14 21L23 11" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
+
+<!-- LOGO -->
+<div class="logo">
+    <img src="img/img_user.png" alt="Logo" class="logo-img">
+</div>
+
+      <!-- TÍTULO DA PÁGINA -->
       <h1 class="title">Bem-vindo de volta</h1>
+
+      <!-- SUBTÍTULO / INSTRUÇÃO -->
       <p class="subtitle">Entre com suas credenciais para continuar</p>
     </div>
 
+    <!-- FORMULÁRIO DE LOGIN -->
     <form class="form" id="loginForm" novalidate>
 
+      <!-- CAMPO DE E-MAIL -->
       <div class="field" id="field-email">
         <label for="email">E-mail</label>
         <div class="input-wrap">
+          <!-- Ícone de envelope-->
           <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
             <polyline points="22,6 12,13 2,6"/>
           </svg>
-          <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email">
+          <!--digita o e-mail -->
+          <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email"/>
         </div>
+        <!--  erro (vazio por padrão) -->
         <span class="error-msg" id="error-email"></span>
       </div>
 
+      <!-- CAMPO DE SENHA -->
       <div class="field" id="field-password">
         <label for="password">Senha</label>
         <div class="input-wrap">
+          <!-- Ícone de cadeado -->
           <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
             <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
           </svg>
-          <input type="password" id="password" name="password" placeholder="••••••••" autocomplete="current-password">
+          <!-- Caixa onde o usuário digita a senha  -->
+          <input type="password" id="password" name="password" placeholder="••••••••" autocomplete="current-password"/>
+          <!-- Botão de olho para mostrar/ocultar a senha (JS) -->
           <button type="button" class="toggle-pass" id="togglePass" aria-label="Mostrar senha">
             <svg id="eyeIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
@@ -52,29 +69,37 @@
             </svg>
           </button>
         </div>
+        <!--  erro de senha -->
         <span class="error-msg" id="error-password"></span>
       </div>
 
+      <!-- LINHA DE OPÇÕES:  -->
       <div class="row-options">
+
+        <!-- CHECKBOX -->
         <label class="checkbox-label">
-          <input type="checkbox" id="remember">
+          <input type="checkbox" id="remember"/>
           <span class="checkmark"></span>
           Lembrar de mim
         </label>
+
+        <!-- Esqueci a senha -->
         <a href="#" class="link-forgot">Esqueci a senha</a>
       </div>
 
+      <!-- BOTÃO PRINCIPAL DE ENVIO -->
       <button type="submit" class="btn-primary" id="submitBtn">
         <span id="btnText">Entrar</span>
+        <!-- Animação de carregamento (fica visível só com JS, aqui é decorativo) -->
         <span class="spinner" id="spinner" aria-hidden="true"></span>
       </button>
+
     </form>
 
-    <p class="footer-text">
-      Não tem uma conta? <a href="criarlogin.html" class="link">Criar conta</a>
-    </p>
+    <!-- RODAPÉ: -->
+    <p class="footer-text">Não tem uma conta? <a href="criarlogin.html" class="link">Criar conta</a></p>
+
   </main>
 
-  <script src="../js/login.js"></script>
 </body>
 </html>
