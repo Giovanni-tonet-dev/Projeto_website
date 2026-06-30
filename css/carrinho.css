@@ -1,150 +1,95 @@
-
-
-.carrinho-page {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 24px;
+/* ============================================
+   CARRINHO.CSS
+   ============================================ */
+.carrinho-layout {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .carrinho-layout { grid-template-columns: 1fr 320px; }
 }
 
-.carrinho-page h1 {
-  font-family: var(--font-heading);
-  color: var(--color-text);
-  margin-bottom: 24px;
-}
+.carrinho-titulo { font-family: var(--font-heading); font-size: 1.5rem; margin: 0 0 24px; }
 
 .carrinho-item {
   display: flex;
   align-items: center;
-  gap: 20px;
-  background: var(--color-white);
-  border-radius: var(--radius);
-  padding: 20px;
-  margin-bottom: 16px;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--color-border);
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-border);
   flex-wrap: wrap;
 }
-
-.produto-link {
-  display: contents;
-  color: inherit;
-  text-decoration: none;
-}
-
-.carrinho-item .produto-imagem {
-  width: 90px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: var(--radius);
-  flex-shrink: 0;
-  cursor: pointer;
-  transition: opacity var(--transition);
-}
-
-.carrinho-item .produto-imagem:hover {
-  opacity: 0.85;
-}
-
-.produto-info {
-  flex: 1;
-  min-width: 180px;
-}
-
-.produto-info h3 {
+.carrinho-item img { width: 72px; height: 72px; object-fit: cover; border-radius: var(--radius); flex-shrink: 0; }
+.carrinho-item-info { flex: 1; min-width: 120px; }
+.carrinho-item-info h4 { margin: 0 0 4px; font-size: 0.9rem; }
+.carrinho-item-preco { font-size: 0.85rem; color: var(--color-text-muted); }
+.carrinho-item-qtd { display: flex; align-items: center; gap: 8px; }
+.carrinho-item-qtd button {
+  width: 28px; height: 28px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 50%;
+  background: white;
   font-size: 1rem;
-  font-weight: 600;
-  color: var(--color-text);
-  margin: 0 0 6px 0;
   cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all var(--transition);
+}
+.carrinho-item-qtd button:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.carrinho-item-qtd span { font-weight: 600; min-width: 20px; text-align: center; }
+.carrinho-item-subtotal { font-weight: 700; color: var(--color-primary); min-width: 90px; text-align: right; }
+.carrinho-item-remove {
+  background: none; border: none; color: var(--color-text-muted);
+  cursor: pointer; font-size: 0.9rem; padding: 4px;
   transition: color var(--transition);
 }
+.carrinho-item-remove:hover { color: var(--color-error); }
 
-.produto-info h3:hover {
-  color: var(--color-primary);
+/* Resumo */
+.carrinho-resumo {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  height: fit-content;
 }
+.carrinho-resumo h3 { margin: 0 0 20px; font-family: var(--font-heading); }
+.resumo-linha { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.9rem; }
+.resumo-linha.total { font-weight: 700; font-size: 1.05rem; padding-top: 12px; border-top: 1px solid var(--color-border); }
+.gratis { color: var(--color-success); font-weight: 600; }
+.btn-finalizar {
+  width: 100%; padding: 12px;
+  background: var(--color-primary); color: white;
+  border: none; border-radius: var(--radius);
+  font-size: 0.95rem; font-weight: 700;
+  cursor: pointer; margin-top: 16px;
+  transition: background var(--transition);
+}
+.btn-finalizar:hover { background: var(--color-primary-dark); }
+.btn-limpar {
+  width: 100%; padding: 10px;
+  background: none; border: 1.5px solid var(--color-border);
+  color: var(--color-text-muted); border-radius: var(--radius);
+  font-size: 0.85rem; cursor: pointer; margin-top: 8px;
+  transition: all var(--transition);
+}
+.btn-limpar:hover { border-color: var(--color-error); color: var(--color-error); }
 
-.produto-info p {
-  color: var(--color-text-muted);
-  font-size: 0.85rem;
-  margin: 0 0 14px 0;
+/* Vazio */
+.carrinho-vazio {
+  text-align: center; padding: 60px 24px;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
 }
-
-.acoes {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.carrinho-vazio span { font-size: 3rem; }
+.carrinho-vazio p { color: var(--color-text-muted); }
+.btn-continuar {
+  background: var(--color-primary); color: white;
+  padding: 10px 24px; border-radius: 50px;
+  font-weight: 600; font-size: 0.9rem;
+  transition: background var(--transition);
 }
-
-.acoes button {
-  width: 30px;
-  height: 30px;
-  border: 1.5px solid var(--color-border);
-  border-radius: 6px;
-  background: none;
-  cursor: pointer;
-  font-size: 1rem;
-  color: var(--color-text);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color var(--transition);
-}
-
-.acoes button:hover {
-  background-color: var(--color-border);
-}
-
-.acoes span {
-  min-width: 24px;
-  text-align: center;
-  font-weight: 600;
-}
-
-.btn-remover {
-  margin-left: 12px;
-  background: none;
-  border: 1.5px solid var(--color-error) !important;
-  color: var(--color-error) !important;
-  border-radius: 6px;
-  padding: 4px 12px !important;
-  font-size: 0.8rem;
-  cursor: pointer;
-  width: auto !important;
-  height: auto !important;
-}
-
-.btn-remover:hover {
-  background-color: #fef2f2 !important;
-}
-
-.carrinho-lateral {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
-  margin-left: auto;
-}
-
-.produto-preco {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  white-space: nowrap;
-}
-
-.btn-comprar {
-  background: var(--color-primary);
-  color: var(--color-white);
-  border: none;
-  border-radius: var(--radius);
-  padding: 8px 16px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background-color var(--transition);
-}
-
-.btn-comprar:hover {
-  background-color: var(--color-primary-dark);
-}
+.btn-continuar:hover { background: var(--color-primary-dark); }

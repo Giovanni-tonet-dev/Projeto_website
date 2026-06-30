@@ -1,63 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Samsung Galaxy S25 Ultra — TechCell</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galaxy S25 — TechCell</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/navbar.css">
-  <link rel="stylesheet" href="../css/produtos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css"><link rel="stylesheet" href="../css/navbar.css"><link rel="stylesheet" href="../css/home.css">
+  <style>
+    .produto-detalhe{max-width:960px;margin:40px auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+    @media(max-width:640px){.produto-detalhe{grid-template-columns:1fr}}
+    .produto-detalhe__img{border-radius:20px;overflow:hidden;background:#f8fafc;box-shadow:0 8px 32px rgba(0,0,0,0.12)}
+    .produto-detalhe__img img{width:100%;height:420px;object-fit:cover}
+    .produto-detalhe__info{display:flex;flex-direction:column;gap:16px}
+    .produto-detalhe__badge{display:inline-block;background:#2563eb;color:white;font-size:0.75rem;font-weight:700;padding:3px 10px;border-radius:50px}
+    .produto-detalhe__nome{font-family:var(--font-heading);font-size:1.8rem;font-weight:800;margin:0;line-height:1.2}
+    .produto-detalhe__stars{color:#f59e0b;font-size:1rem}
+    .produto-detalhe__preco{font-size:2rem;font-weight:800;color:var(--color-primary)}
+    .produto-detalhe__desc{color:var(--color-text-muted);line-height:1.6;font-size:0.95rem}
+    .produto-detalhe__specs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+    .produto-detalhe__specs li{display:flex;gap:8px;font-size:0.875rem}
+    .produto-detalhe__specs li::before{content:'✓';color:var(--color-success);font-weight:700}
+    .produto-detalhe__actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-comprar-detalhe{flex:1;min-width:140px;padding:14px;background:var(--color-primary);color:white;border:none;border-radius:var(--radius);font-size:1rem;font-weight:700;cursor:pointer;transition:background var(--transition)}
+    .btn-comprar-detalhe:hover{background:var(--color-primary-dark)}
+    .btn-fav-detalhe{padding:14px 18px;background:white;border:1.5px solid var(--color-border);border-radius:var(--radius);font-size:1.2rem;cursor:pointer;transition:all var(--transition)}
+  </style>
 </head>
-
 <body>
-
-  <!-- ── Navbar ── -->
-  <nav class="navbar">
-    <a href="../index.html" class="navbar__logo">
-      <div class="navbar__logo-icon">
-        <div class="celular"></div>
-        <div class="camera"></div>
-      </div>
-      <h2 class="navbar__brand">TechCell</h2>
-    </a>
-
-    <div class="navbar__search">
-      <span>🔍</span>
-      <input type="text" placeholder="Faça uma busca" aria-label="Campo de busca">
-    </div>
-
-    <div class="navbar__actions">
-      <a href="favoritos.html" class="navbar__btn">♡ Favoritos</a>
-      <a href="carrinho.html" class="navbar__btn">🛒 Carrinho</a>
-      <a href="login.html" class="navbar__btn">👤 Entrar</a>
-    </div>
-  </nav>
-
-  <!-- ── Conteúdo ── -->
-  <div class="page-content">
-    <div class="produto-container">
-      <img src="../img/galaxy_S25.png" alt="Samsung Galaxy S25 Ultra" class="produto-imagem">
-
-      <div class="produto-info">
-        <h1>Samsung Galaxy S25 Ultra</h1>
-        <p class="produto-preco">R$ 10.999,00</p>
-        <p>
-          O mais avançado Samsung já criado, com câmera profissional de 200MP,
-          desempenho excepcional com Snapdragon 8 Gen 2 e bateria de longa duração.
-        </p>
-        <h3>Cores disponíveis</h3>
-        <div class="cores">
-          <span class="cor preto" title="Preto"></span>
-          <span class="cor vermelho" title="Vermelho"></span>
-          <span class="cor azul" title="Azul"></span>
-          <span class="cor laranja" title="Laranja"></span>
-        </div>
-        <button class="btn-comprar">Comprar agora</button>
+<nav class="navbar">
+  <a href="../index.html" class="navbar__logo"><div class="navbar__logo-icon"><div class="celular"></div><div class="camera"></div></div><h2 class="navbar__brand">TechCell</h2></a>
+  <div class="navbar__search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" placeholder="Buscar…"></div>
+  <div class="navbar__actions">
+    <a href="favoritos.html" class="navbar__btn"><span>🤍</span><span class="btn-label">Favoritos</span></a>
+    <a href="carrinho.html" class="navbar__btn"><span>🛒</span><span class="btn-label">Carrinho</span><span class="badge badge-carrinho" style="display:none">0</span></a>
+    <a href="login.html" class="navbar__btn"><span>👤</span><span class="btn-label">Entrar</span></a>
+  </div>
+</nav>
+<div class="page-content">
+  <div class="produto-detalhe">
+    <div class="produto-detalhe__img"><img src="../img/galaxy_S25.png" alt="Galaxy S25"></div>
+    <div class="produto-detalhe__info">
+      <span class="produto-detalhe__badge">Destaque</span>
+      <h1 class="produto-detalhe__nome">Samsung Galaxy S25</h1>
+      <div class="produto-detalhe__stars">★★★★★ <span style="color:#64748b;font-size:0.85rem">(94 avaliações)</span></div>
+      <div class="produto-detalhe__preco">R$ 6.799,00</div>
+      <p class="produto-detalhe__desc">O Galaxy S25 combina o poder do Snapdragon 8 Elite com uma câmera de 200MP e inteligência artificial avançada com Galaxy AI. Tela Dynamic AMOLED 2X com até 2600 nits de brilho.</p>
+      <ul class="produto-detalhe__specs">
+        <li>Snapdragon 8 Elite for Galaxy</li>
+        <li>Câmera tripla: 200MP + 50MP + 10MP</li>
+        <li>Tela Dynamic AMOLED 2X, 6.2" 120Hz</li>
+        <li>Bateria 4.000mAh com carregamento 45W</li>
+        <li>Android 15 com Galaxy AI</li>
+      </ul>
+      <div class="produto-detalhe__actions">
+        <button class="btn-comprar-detalhe" onclick='adicionarAoCarrinho({id:"galaxy_s25",nome:"Samsung Galaxy S25",preco:6799,img:"../img/galaxy_S25.png"})'>🛒 Adicionar ao carrinho</button>
+        <button class="btn-fav-detalhe" data-fav="galaxy_s25" onclick="toggleFavorito('galaxy_s25','Galaxy S25')">🤍</button>
       </div>
     </div>
   </div>
-
+</div>
+<script src="../js/main.js"></script>
 </body>
 </html>

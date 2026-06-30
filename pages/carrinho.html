@@ -5,85 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrinho — TechCell</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/home.css">
   <link rel="stylesheet" href="../css/carrinho.css">
 </head>
-
 <body>
-
-  <nav class="navbar">
-    <a href="../index.html" class="navbar__logo">
-      <div class="navbar__logo-icon">
-        <div class="celular"></div>
-        <div class="camera"></div>
-      </div>
-      <h2 class="navbar__brand">TechCell</h2>
+<nav class="navbar">
+  <a href="../index.html" class="navbar__logo">
+    <div class="navbar__logo-icon"><div class="celular"></div><div class="camera"></div></div>
+    <h2 class="navbar__brand">TechCell</h2>
+  </a>
+  <div class="navbar__search">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Buscar…" aria-label="Busca">
+  </div>
+  <div class="navbar__actions">
+    <a href="favoritos.html" class="navbar__btn"><span>🤍</span><span class="btn-label">Favoritos</span></a>
+    <a href="carrinho.html" class="navbar__btn">
+      <span>🛒</span><span class="btn-label">Carrinho</span>
+      <span class="badge badge-carrinho" style="display:none">0</span>
     </a>
+    <a href="login.html" class="navbar__btn"><span>👤</span><span class="btn-label">Entrar</span></a>
+  </div>
+</nav>
 
-    <div class="navbar__search">
-      <span>🔍</span>
-      <input type="text" placeholder="Faça uma busca" aria-label="Campo de busca">
+<div class="page-content">
+  <div class="carrinho-layout">
+    <div>
+      <h2 class="carrinho-titulo">🛒 Meu Carrinho</h2>
+      <div id="carrinho-lista"></div>
     </div>
-
-    <div class="navbar__actions">
-      <a href="favoritos.html" class="navbar__btn">♡ Favoritos</a>
-      <a href="carrinho.html" class="navbar__btn">🛒 Carrinho</a>
-      <a href="login.html" class="navbar__btn">👤 Entrar</a>
-    </div>
-  </nav>
-
-  <!-- ── Conteúdo ── -->
-  <div class="page-content">
-    <div class="carrinho-page">
-      <h1>Carrinho de compras</h1>
-
-      <div class="carrinho-item">
-        <a href="produto1.html" class="produto-link">
-          <img src="../img/tela_iphone17.png" alt="iPhone 17 Pro Max" class="produto-imagem">
-        </a>
-        <div class="produto-info">
-          <a href="produto1.html" class="produto-link">
-            <h3>iPhone 17 Pro Max 256GB</h3>
-          </a>
-          <p>Tela Super Retina XDR 6.9", Câmera 48MP, Titânio Natural</p>
-          <div class="acoes">
-            <button aria-label="Diminuir quantidade">−</button>
-            <span>1</span>
-            <button aria-label="Aumentar quantidade">+</button>
-            <button class="btn-remover">Remover</button>
-          </div>
-        </div>
-        <div class="carrinho-lateral">
-          <div class="produto-preco">R$ 7.499,90</div>
-          <button class="btn-comprar">Comprar</button>
-        </div>
-      </div>
-
-      <div class="carrinho-item">
-        <a href="produto2.html" class="produto-link">
-          <img src="../img/galaxy_S25.png" alt="Galaxy S25" class="produto-imagem">
-        </a>
-        <div class="produto-info">
-          <a href="produto2.html" class="produto-link">
-            <h3>Samsung Galaxy S25 256GB</h3>
-          </a>
-          <p>Tela AMOLED 6.8", Câmera 200MP, 5G</p>
-          <div class="acoes">
-            <button aria-label="Diminuir quantidade">−</button>
-            <span>1</span>
-            <button aria-label="Aumentar quantidade">+</button>
-            <button class="btn-remover">Remover</button>
-          </div>
-        </div>
-        <div class="carrinho-lateral">
-          <div class="produto-preco">R$ 7.999,90</div>
-          <button class="btn-comprar">Comprar</button>
-        </div>
-      </div>
+    <div class="carrinho-resumo">
+      <h3>Resumo do Pedido</h3>
+      <div id="carrinho-total"></div>
     </div>
   </div>
+</div>
 
+<script src="../js/main.js"></script>
 </body>
 </html>

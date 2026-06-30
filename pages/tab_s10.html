@@ -1,63 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tab S10  — TechCell</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/navbar.css">
-  <link rel="stylesheet" href="../css/produtos.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galaxy Tab S10 — TechCell</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css"><link rel="stylesheet" href="../css/navbar.css"><link rel="stylesheet" href="../css/home.css">
+  <style>.produto-detalhe{max-width:960px;margin:40px auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px}@media(max-width:640px){.produto-detalhe{grid-template-columns:1fr}}.produto-detalhe__img{border-radius:20px;overflow:hidden;background:#f8fafc;box-shadow:0 8px 32px rgba(0,0,0,.12)}.produto-detalhe__img img{width:100%;height:420px;object-fit:cover}.produto-detalhe__info{display:flex;flex-direction:column;gap:16px}.badge-novo{display:inline-block;background:#22c55e;color:#fff;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:50px}.produto-detalhe__nome{font-family:var(--font-heading);font-size:1.8rem;font-weight:800;margin:0;line-height:1.2}.produto-detalhe__stars{color:#f59e0b}.produto-detalhe__preco{font-size:2rem;font-weight:800;color:var(--color-primary)}.produto-detalhe__desc{color:var(--color-text-muted);line-height:1.6;font-size:.95rem}.specs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}.specs li{display:flex;gap:8px;font-size:.875rem}.specs li::before{content:'✓';color:var(--color-success);font-weight:700}.acoes{display:flex;gap:12px;flex-wrap:wrap}.btn-c{flex:1;min-width:140px;padding:14px;background:var(--color-primary);color:#fff;border:none;border-radius:var(--radius);font-size:1rem;font-weight:700;cursor:pointer}.btn-c:hover{background:var(--color-primary-dark)}.btn-f{padding:14px 18px;background:#fff;border:1.5px solid var(--color-border);border-radius:var(--radius);font-size:1.2rem;cursor:pointer}</style>
 </head>
- 
 <body>
- 
-  <!-- ── Navbar ── -->
-  <nav class="navbar">
-    <a href="../index.html" class="navbar__logo">
-      <div class="navbar__logo-icon">
-        <div class="celular"></div>
-        <div class="camera"></div>
-      </div>
-      <h2 class="navbar__brand">TechCell</h2>
-    </a>
- 
-    <div class="navbar__search">
-      <span>🔍</span>
-      <input type="text" placeholder="Faça uma busca" aria-label="Campo de busca">
-    </div>
- 
-    <div class="navbar__actions">
-      <a href="favoritos.html" class="navbar__btn">♡ Favoritos</a>
-      <a href="carrinho.html" class="navbar__btn">🛒 Carrinho</a>
-      <a href="login.html" class="navbar__btn">👤 Entrar</a>
-    </div>
-  </nav>
- 
-  <!-- ── Conteúdo ── -->
-  <div class="page-content">
-    <div class="produto-container">
-      <img src="../img/galaxy_tab_s10.png" alt="Galaxy Tab 10 Ultra" class="produto-imagem">
- 
-      <div class="produto-info">
-        <h1>Galaxy Tab 10 ultra</h1>
-        <p class="produto-preco">R$ 5.299,00</p>
-        <p>
-          O mais avançado tablet já criado, com câmera profissional,
-          desempenho excepcional e bateria de longa duração.
-        </p>
-        <h3>Cores disponíveis</h3>
-        <div class="cores">
-          <span class="cor preto" title="Preto"></span>
-          <span class="cor vermelho" title="Vermelho"></span>
-          <span class="cor azul" title="Azul"></span>
-          <span class="cor laranja" title="Laranja"></span>
-        </div>
-        <button class="btn-comprar">Comprar agora</button>
-      </div>
-    </div>
-  </div>
- 
-</body>
-</html>
+<nav class="navbar"><a href="../index.html" class="navbar__logo"><div class="navbar__logo-icon"><div class="celular"></div><div class="camera"></div></div><h2 class="navbar__brand">TechCell</h2></a><div class="navbar__search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" placeholder="Buscar…"></div><div class="navbar__actions"><a href="favoritos.html" class="navbar__btn"><span>🤍</span><span class="btn-label">Favoritos</span></a><a href="carrinho.html" class="navbar__btn"><span>🛒</span><span class="btn-label">Carrinho</span><span class="badge badge-carrinho" style="display:none">0</span></a><a href="login.html" class="navbar__btn"><span>👤</span><span class="btn-label">Entrar</span></a></div></nav>
+<div class="page-content"><div class="produto-detalhe"><div class="produto-detalhe__img"><img src="../img/galaxy_tab_s10.png" alt="Galaxy Tab S10"></div><div class="produto-detalhe__info"><span class="badge-novo">Novo</span><h1 class="produto-detalhe__nome">Galaxy Tab S10</h1><div class="produto-detalhe__stars">★★★★★ <span style="color:#64748b;font-size:.85rem">(74 avaliações)</span></div><div class="produto-detalhe__preco">R$ 6.799,00</div><p class="produto-detalhe__desc">O iPad Air com chip M2 combina desempenho profissional com design ultrafino. Compatível com Apple Pencil Pro e Magic Keyboard, é perfeito para criadores de conteúdo e profissionais.</p><ul class="specs"><li>Chip Apple M2 — CPU 8 núcleos</li><li>Tela Liquid Retina 11" com True Tone</li><li>Compatível com Apple Pencil Pro</li><li>Bateria com até 10h de uso</li><li>Wi-Fi 6E e 5G disponíveis</li></ul><div class="acoes"><button class="btn-c" onclick='adicionarAoCarrinho({id:"galaxy_tab_s10",nome:"Galaxy Tab S10",preco:5299,img:"../img/galaxy_tab_s10.png"})'>🛒 Adicionar ao carrinho</button><button class="btn-f" data-fav="ipad_air" onclick="toggleFavorito('ipad_air','Galaxy Tab S10')">🤍</button></div></div></div></div>
+<script src="../js/main.js"></script>
+</body></html>

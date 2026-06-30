@@ -1,147 +1,259 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechCell — Smartphones & Acessórios</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/home.css">
 </head>
-
 <body>
 
-  <!-- ── Navbar ── -->
-  <nav class="navbar">
-    <a href="index.html" class="navbar__logo">
-      <div class="navbar__logo-icon">
-        <div class="celular"></div>
-        <div class="camera"></div>
-      </div>
-      <h2 class="navbar__brand">TechCell</h2>
+<!-- ── Navbar ── -->
+<nav class="navbar">
+  <a href="index.html" class="navbar__logo">
+    <div class="navbar__logo-icon">
+      <div class="celular"></div>
+      <div class="camera"></div>
+    </div>
+    <h2 class="navbar__brand">TechCell</h2>
+  </a>
+
+  <div class="navbar__search">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+    </svg>
+    <input type="text" placeholder="Buscar produtos…" aria-label="Campo de busca">
+  </div>
+
+  <div class="navbar__actions">
+    <a href="pages/favoritos.html" class="navbar__btn" aria-label="Favoritos">
+      <span>🤍</span><span class="btn-label">Favoritos</span>
     </a>
+    <a href="pages/carrinho.html" class="navbar__btn" aria-label="Carrinho">
+      <span>🛒</span><span class="btn-label">Carrinho</span>
+      <span class="badge badge-carrinho" style="display:none">0</span>
+    </a>
+    <a href="pages/login.html" class="navbar__btn" id="btn-usuario" aria-label="Entrar">
+      <span>👤</span><span class="btn-label">Entrar</span>
+    </a>
+  </div>
+</nav>
 
-    <div class="navbar__search">
-      <span>🔍</span>
-      <input type="text" placeholder="Faça uma busca" aria-label="Campo de busca">
-    </div>
+<div class="page-content">
 
-    <div class="navbar__actions">
-      <a href="pages/favoritos.html" class="navbar__btn" aria-label="Favoritos">
-        ♡ Favoritos
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">🔥 Novos lançamentos 2025</div>
+      <h1>Tecnologia no seu<br>bolso, na melhor oferta</h1>
+      <p>Smartphones, tablets e acessórios premium com entrega rápida e garantia estendida.</p>
+      <div class="hero-actions">
+        <button class="btn-hero-primary" onclick="location.href='pages/site_celulares_vender.html'">Ver produtos</button>
+        <button class="btn-hero-secondary" onclick="location.href='pages/site_celulares_vender.html?filtro=oferta'">Ofertas do dia</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Categorias ── -->
+  <section class="categorias-section">
+    <div class="categorias-container">
+      <a href="pages/site_celulares_vender.html" class="categoria-card active">
+        <div class="categoria-icon">📱</div>
+        <h4>Smartphones</h4>
+        <p>Últimos modelos</p>
       </a>
-      <a href="pages/carrinho.html" class="navbar__btn" aria-label="Carrinho de compras">
-        🛒 Carrinho
+      <a href="pages/site_celulares_vender.html?filtro=tablet" class="categoria-card">
+        <div class="categoria-icon">💻</div>
+        <h4>Tablets</h4>
+        <p>Trabalho e lazer</p>
       </a>
-      <a href="pages/login.html" class="navbar__btn" aria-label="Entrar">
-        👤 Entrar
+      <a href="pages/site_celulares_vender.html?filtro=acessorio" class="categoria-card">
+        <div class="categoria-icon">🎧</div>
+        <h4>Acessórios</h4>
+        <p>Capas e proteção</p>
+      </a>
+      <a href="pages/site_celulares_vender.html?filtro=oferta" class="categoria-card">
+        <div class="categoria-icon">🏷️</div>
+        <h4>Ofertas</h4>
+        <p>Descontos imperdíveis</p>
       </a>
     </div>
-  </nav>
+  </section>
 
   <!-- ── Conteúdo principal ── -->
-  <div class="page-content">
+  <div class="container">
 
-    <!-- Categorias -->
-    <header class="site-header">
+    <!-- Novidades -->
+    <section class="produtos-section">
       <div class="section-header">
-        <h3>Categorias</h3>
+        <h2>🆕 Novidades</h2>
+        <div class="divider"></div>
+        <a href="pages/site_celulares_vender.html" style="font-size:0.85rem;color:var(--color-primary);white-space:nowrap;font-weight:600">Ver todos →</a>
+      </div>
+
+      <div class="novidades-grid">
+        <a href="pages/produto2.html" class="novidade-item">
+          <img src="img/galaxy_S25.png" alt="Samsung Galaxy S25">
+        </a>
+        <a href="pages/produto1.html" class="novidade-item">
+          <img src="img/tela_iphone17.png" alt="iPhone 17 Pro">
+        </a>
+        <a href="pages/produto3.html" class="novidade-item">
+          <img src="img/xiomi.png" alt="Xiaomi 14 Ultra">
+        </a>
+        <a href="pages/ipad_air.html" class="novidade-item">
+          <img src="img/ipad_air.png" alt="iPad Air M2">
+        </a>
+        <a href="pages/pad7pro.html" class="novidade-item">
+          <img src="img/pad7pro.png" alt="Xiaomi Pad 7 Pro">
+        </a>
+      </div>
+    </section>
+
+    <!-- Banner Promo -->
+    <div class="promo-banner">
+      <div>
+        <h3>📦 Frete grátis em todo o Brasil</h3>
+        <p>Para compras acima de R$ 299. Entrega expressa disponível.</p>
+      </div>
+      <button class="btn-promo" onclick="location.href='pages/site_celulares_vender.html'">Aproveitar agora</button>
+    </div>
+
+    <!-- Mais Vendidos -->
+    <section class="produtos-section">
+      <div class="section-header">
+        <h2>⭐ Mais Vendidos</h2>
         <div class="divider"></div>
       </div>
 
-      <div class="categorias-container">
-        <a href="pages/site_celulares_vender.html" class="categoria-card" aria-label="Smartphones — Ver celulares">
-          <h4>Smartphones</h4>
-          <p>Últimos modelos</p>
-        </a>
-
-        <div class="categoria-card">
-          <h4>Acessórios</h4>
-          <p>Capas e proteção</p>
-        </div>
-        <div class="categoria-card">
-          <h4>Tablets</h4>
-          <p>Para trabalho e lazer</p>
-        </div>
+      <div class="produtos-grid" id="mais-vendidos">
+        <!-- Gerado via JS -->
       </div>
-    </header>
+    </section>
 
-    <!-- Novidades -->
-    <main>
-      <section class="produtos-section">
-        <div class="section-header" style="color: var(--color-text);">
-          <h3>Novidades</h3>
-          <div class="divider" style="background-color: var(--color-border);"></div>
-        </div>
-
-        <div class="produtos-grid">
-          <a href="pages/produto2.html">
-            <img src="img/galaxy_S25.png" alt="Samsung Galaxy S25">
-          </a>
-          <a href="pages/produto1.html">
-            <img src="img/tela_iphone17.png" alt="iPhone 17">
-          </a>
-          <a href="pages/produto3.html">
-            <img src="img/xiomi.png" alt="Xiaomi">
-          </a>
-        </div>
-        <div class="section-header" style="color: var(--color-text);">
-          <h3>Mais Vendidos</h3>
-          <div class="divider" style="background-color: var(--color-border);"></div>
-        </div>
-      </section>
-
-      <div class="produtos_principais">
-
-        <div class="produto-card">
-          <a href="pages/ipad_air.html">
-            <img src="img/ipad_air.png" alt="iPad Air">
-          </a>
-          <div class="produto-card-info">
-            <h3>iPad Air</h3>
-            <p class="produto-card-desc">Tela Liquid Retina, chip M2 e suporte ao Apple Pencil.</p>
-            <span class="produto-card-preco">R$ 6.799,00</span>
-            <button class="btn-comprar">Comprar</button>
-          </div>
-        </div>
-
-        <div class="produto-card">
-          <a href="pages/tab_s10.html">
-            <img src="img/galaxy_tab_s10.png" alt="Samsung Galaxy Tab S10">
-          </a>
-          <div class="produto-card-info">
-            <h3>Galaxy Tab S10</h3>
-            <p class="produto-card-desc">Tela AMOLED, S Pen incluída e bateria de longa duração.</p>
-            <span class="produto-card-preco">R$ 5.299,00</span>
-            <button class="btn-comprar">Comprar</button>
-          </div>
-        </div>
-
-        <div class="produto-card">
-          <a href="pages/capa_iphone.html">
-            <img src="img/capa_iphone.png" alt="Capa para iPhone">
-          </a>
-          <div class="produto-card-info">
-            <h3>Capa para iPhone</h3>
-            <p class="produto-card-desc">Proteção resistente a quedas com acabamento premium.</p>
-            <span class="produto-card-preco">R$ 149,00</span>
-            <button class="btn-comprar">Comprar</button>
-          </div>
-        </div>
-
+    <!-- Tablets -->
+    <section class="produtos-section">
+      <div class="section-header">
+        <h2>💻 Tablets</h2>
+        <div class="divider"></div>
       </div>
-    </main>
 
-    <footer class="site-footer">
-      <p>&copy; 2026 TechCell. Todos os direitos reservados.</p>
-    </footer>
+      <div class="produtos-grid" id="tablets-grid">
+        <!-- Gerado via JS -->
+      </div>
+    </section>
 
-  </div>
+    <!-- Acessórios -->
+    <section class="produtos-section">
+      <div class="section-header">
+        <h2>🎧 Acessórios</h2>
+        <div class="divider"></div>
+      </div>
 
+      <div class="produtos-grid" id="acessorios-grid">
+        <!-- Gerado via JS -->
+      </div>
+    </section>
+
+  </div><!-- /container -->
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>TechCell</h4>
+        <ul>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Trabalhe conosco</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Atendimento</h4>
+        <ul>
+          <li><a href="#">Central de ajuda</a></li>
+          <li><a href="#">Trocas e devoluções</a></li>
+          <li><a href="#">Rastreio de pedido</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Pagamento</h4>
+        <ul>
+          <li><a href="#">PIX</a></li>
+          <li><a href="#">Cartão de crédito</a></li>
+          <li><a href="#">Boleto bancário</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="pages/termos.html">Termos de uso</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 TechCell. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</div><!-- /page-content -->
+
+<script src="js/main.js"></script>
+<script>
+  // Renderizar grades da home
+  document.addEventListener('DOMContentLoaded', () => {
+    const todos = obterCatalogoProdutos();
+
+    // Mais vendidos: smartphones
+    const maisVendidos = document.getElementById('mais-vendidos');
+    if (maisVendidos) {
+      maisVendidos.innerHTML = todos
+        .filter(p => p.categoria === 'smartphone')
+        .map(p => {
+          // Ajustar caminhos para raiz
+          const pAdj = { ...p, img: p.img.replace('../', '') };
+          const html = criarCardHTML(pAdj);
+          return html;
+        }).join('');
+      atualizarBotoesVavorito();
+    }
+
+    // Tablets
+    const tabletsGrid = document.getElementById('tablets-grid');
+    if (tabletsGrid) {
+      tabletsGrid.innerHTML = todos
+        .filter(p => p.categoria === 'tablet')
+        .map(p => {
+          const pAdj = { ...p, img: p.img.replace('../', '') };
+          return criarCardHTML(pAdj);
+        }).join('');
+      atualizarBotoesVavorito();
+    }
+
+    // Acessórios
+    const acessoriosGrid = document.getElementById('acessorios-grid');
+    if (acessoriosGrid) {
+      acessoriosGrid.innerHTML = todos
+        .filter(p => p.categoria === 'acessorio')
+        .map(p => {
+          const pAdj = { ...p, img: p.img.replace('../', '') };
+          return criarCardHTML(pAdj);
+        }).join('');
+      atualizarBotoesVavorito();
+    }
+
+    // Atualizar botão de usuário logado
+    const user = JSON.parse(localStorage.getItem('tc_user') || 'null');
+    const btnUser = document.getElementById('btn-usuario');
+    if (user && btnUser) {
+      btnUser.innerHTML = `<span>👤</span><span class="btn-label">${user.nome || user.email.split('@')[0]}</span>`;
+    }
+  });
+</script>
 </body>
-
 </html>

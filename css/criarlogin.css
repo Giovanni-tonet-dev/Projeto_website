@@ -1,120 +1,15 @@
-body {
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  padding: 20px;
-  box-sizing: border-box;
-}
+/* ============================================
+   CRIARLOGIN.CSS  — reutiliza login.css base
+   ============================================ */
 
-.caixa {
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  border-radius: 8px;
-  padding: 30px;
-  width: 350px;
-  text-align: center;
+/* Força da senha */
+.forca-wrap { margin-top: 6px; }
+.forca-track {
+  height: 4px; background: #e5e7eb; border-radius: 4px; overflow: hidden;
 }
-
-.caixa h1 {
-  font-size: 24px;
-  margin-bottom: 5px;
-  color: #333333;
+.forca-bar {
+  height: 100%; width: 0; border-radius: 4px;
+  transition: width 0.35s ease, background 0.35s ease;
+  background: #e5e7eb;
 }
-
-.caixa p {
-  font-size: 14px;
-  color: #777777;
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  text-align: left;
-  font-size: 14px;
-  margin-bottom: 4px;
-  color: #333333;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  font-size: 14px;
-  box-sizing: border-box;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
-  border-color: #4a90e2;
-  outline: none;
-}
-
-.termos {
-  margin-bottom: 20px;
-  text-align: left;
-  font-size: 13px;
-  color: #555555;
-}
-
-.termos label {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  font-size: 13px;
-  color: #555555;
-  cursor: pointer;
-}
-
-.termos input[type="checkbox"] {
-  margin-top: 2px;
-  width: auto;
-}
-
-.termos a {
-  color: #4a90e2;
-  text-decoration: none;
-}
-
-.termos a:hover {
-  text-decoration: underline;
-}
-
-button {
-  width: 100%;
-  padding: 11px;
-  background-color: #4a90e2;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #357abd;
-}
-
-.caixa > p:last-child {
-  margin-top: 20px;
-  font-size: 13px;
-  color: #777777;
-}
-
-.caixa > p:last-child a {
-  color: #4a90e2;
-  text-decoration: none;
-}
-
-.caixa > p:last-child a:hover {
-  text-decoration: underline;
-}
-
+.forca-label { font-size: 0.72rem; color: #64748b; margin-top: 4px; }
